@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://github.com/JairRaid/tip-calculator-app
 - Live Site URL: 
 
 ## My process
