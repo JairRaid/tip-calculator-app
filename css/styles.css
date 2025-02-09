@@ -254,6 +254,9 @@ label {
   .result-section button {
     margin-top: auto;
   }
+  .result-section div.wrapper:first-child{
+    margin-bottom: 25px;
+  }
 
   data {
         font-family: 'Space Mono', monospace;
