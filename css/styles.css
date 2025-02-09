@@ -208,11 +208,12 @@ label {
   body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
   }
   
   header {
-        margin-bottom: 87.86px;
+    margin-top: 163px;
+    margin-bottom: 87.86px;
   }
   
   .container {
