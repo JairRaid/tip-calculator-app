@@ -267,7 +267,7 @@ input:focus {
 .result-section button:disabled {
   cursor: not-allowed;
   background-color: #0D686D;
-  opacity: 70%;
+  opacity: 80%;
   color: rgba(0, 71, 75, 0.35);
 }
 
