@@ -236,6 +236,7 @@ label {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
+    margin-top: 16px;
   }
   .btn-container input#custom-input {
     padding: 6px 14px 6px 14px;
