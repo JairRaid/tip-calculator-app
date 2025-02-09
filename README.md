@@ -49,3 +49,6 @@ Users should be able to:
 I learned to create javascript logique for this project.
 
 ## Author
+
+- email: rakotonirainyriija@gmail.com
+- facebook: https://web.facebook.com/jair.rakoto.3/
