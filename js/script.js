@@ -39,6 +39,12 @@ function addDataToEl(data, tipPersonVal, totalVal) {
     }
 }
 
+function removeDataToEl(data) {
+    for (const [key, element] of Object.entries(data)) {
+        element.innerHTML = "$0";
+    }
+}
+
 function checkPeopleNumber(val) {
     if (val.length > 0 && Number(val) === 0) return false;
     else return true;
@@ -96,6 +102,8 @@ containerEl.addEventListener("input", () => {
     checkInputs();
     if (canCalculate) {
         calculate();
+    }else{
+        removeDataToEl(dataEl);
     }
 });
 
@@ -107,6 +115,8 @@ btnContainer.addEventListener("click", (event) => {
         console.log(selected.length);
         tipAmount = selected.length < 3 ? Number(selected.slice(0, 1)) : Number(selected.slice(0, 2));
         customEl.value = "";
+    }else{
+        remeveDataToEl(dataEl);
     }
 });
 
