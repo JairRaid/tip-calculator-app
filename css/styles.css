@@ -203,6 +203,11 @@ label {
     justify-content: center;
     align-items: center;
   }
+  
+  header {
+        margin-bottom: 87.86px;
+  }
+  
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
