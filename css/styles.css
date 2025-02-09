@@ -58,6 +58,10 @@ input::placeholder {
   color: #547878;
 }
 
+input#custom-input {
+  padding: 6px 14px 6px 14px;
+}
+
 .people-section {
   position: relative;
 }
