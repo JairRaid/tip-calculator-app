@@ -191,6 +191,9 @@ label {
   }
 
   data {
+        font-family: 'Space Mono', sans-serif;
+        color: white;
+        font-weight: 700;
         font-size: 2rem !important;
   }
 }
@@ -238,6 +241,9 @@ label {
   }
 
   data {
+        font-family: 'Space Mono', sans-serif;
+        color: white;
+        font-weight: 700;
         font-size: 3rem !important;
   }
 }
