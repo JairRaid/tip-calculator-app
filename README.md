@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/JairRaid/tip-calculator-app
-- Live Site URL: 
+- Live Site URL: https://jairraid.github.io/tip-calculator-app/
 
 ## My process
 
