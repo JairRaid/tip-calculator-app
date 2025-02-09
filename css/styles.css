@@ -189,6 +189,10 @@ label {
   .result-section button {
     margin-top: 32px;
   }
+
+  data {
+        font-size: 2rem !important;
+  }
 }
 @media (min-width: 48.063rem) {
   body {
@@ -231,6 +235,10 @@ label {
   }
   .result-section button {
     margin-top: auto;
+  }
+
+  data {
+        font-size: 3rem !important;
   }
 }
 form input:focus,
