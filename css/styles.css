@@ -189,6 +189,7 @@ label {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 16px;
+    margin-top: 16px;
   }
   .people-section {
     margin-top: 32px;
