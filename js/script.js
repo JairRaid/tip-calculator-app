@@ -116,7 +116,7 @@ btnContainer.addEventListener("click", (event) => {
         tipAmount = selected.length < 3 ? Number(selected.slice(0, 1)) : Number(selected.slice(0, 2));
         customEl.value = "";
     }else{
-        remeveDataToEl(dataEl);
+        removeDataToEl(dataEl);
     }
 });
 
