@@ -127,6 +127,8 @@ customEl.addEventListener("input", (event) => {
     if (event.target.value.length > 0) {
         unselectBtn();
         tipAmount = Number(customEl.value);
+    } else {
+        tipAmount = 0;
     }
 });
 
