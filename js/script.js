@@ -112,11 +112,14 @@ btnContainer.addEventListener("click", (event) => {
     const selected = tipsTab.find((val) => val === event.target.innerHTML);
     if (selected) {
         setStyleBtnSelected(event.target);
-        console.log(selected.length);
         tipAmount = selected.length < 3 ? Number(selected.slice(0, 1)) : Number(selected.slice(0, 2));
         customEl.value = "";
-    }else{
-        removeDataToEl(dataEl);
+        checkInputs();
+        if (canCalculate) {
+            calculate();
+        } else {
+            remeveDataToEl(dataEl);
+        }
     }
 });
 
