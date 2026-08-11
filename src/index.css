@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-white: hsl(0 100% 100%);
+  --color-black: hsl(0 0% 0%);
+  --color-grey-600: hsl(180 25% 32%);
+  --color-grey-550: hsl(180 18% 40%);
+  --color-grey-500: hsl(186 14% 43%);
+  --color-grey-400: hsl(184 14% 56%);
+  --color-grey-300: hsl(184 19% 68%);
+  --color-grey-200: hsl(185 41% 84%);
+  --color-grey-50: hsl(189 47% 97%);
+  --color-green-900: hsl(183 100% 15%);
+  --color-green-800: hsl(183 85% 21%);
+  --color-green-750: hsl(183 79% 24%);
+  --color-green-400: hsl(172 67% 45%);
+  --color-green-200: hsl(173 61% 77%);
+  --color-orange-400: hsl(13 70% 60%);
+
+  /* Typography */
+  --font-space:
+    "Space Mono", system-ui, -apple-system, "Segoe UI", BlinkMacSystemFont;
+
+  --text-48: 48px;
+  --text-32: 32px;
+  --text-24: 24px;
+  --text-20: 20px;
+  --text-16: 16px;
+  --text-13: 13px;
+
+  --leading-71: 1.48;
+  --leading-47: 1.47;
+  --leading-36: 1.5;
+  --leading-30: 1.5;
+  --leading-24: 1.5;
+  --leading-19: 1.46;
+
+  --tracking-1: 1px;
+  --tracking-067: 0.67px;
+
+  --spacing-0: 0px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-40: 40px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-120: 120px;
+  --spacing-128: 128px;
+
+  /* Radius */
+  --radius-5: 5px;
+  --radius-15: 15px;
+  --radius-25: 25px;
+
+  /* Shadow */
+  --shadow-card: 0 32px 43px #4fa6af;
+
+  /* Breakpoint */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+}
+
+body {
+  @apply font-space bg-grey-200;
+}
+.page-shell {
+  @apply flex items-end
+  min-h-dvh w-full
+  md:justify-center md:items-center;
+}
+input[type="number"] {
+  @apply font-bold text-24 text-green-900 appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [-moz-appearance:textfield]
+  w-full outline-none text-end;
+}
+button {
+  @apply cursor-pointer;
+}
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-green-400;
+}
+
+@utility my-transition {
+  @apply transition-all duration-200;
+}

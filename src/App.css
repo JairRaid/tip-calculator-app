@@ -1,0 +1,103 @@
+@reference "./index.css";
+
+.app-main {
+  @apply grow flex flex-col py-32
+  md:grow-0 md:w-full md:max-w-[38.5625rem]
+  lg:max-w-[57.5rem];
+}
+
+.logo {
+  @apply flex justify-center;
+}
+
+.calculator-card {
+  @apply bg-white  rounded-tl-25 rounded-tr-25
+  mt-40 px-24 py-32
+  md:rounded-25 md:px-80 md:py-48 md:shadow-card/30
+  lg:mt-80 lg:grid lg:grid-cols-2 lg:p-32 lg:gap-x-48;
+}
+.calculator-form {
+  @apply flex flex-col gap-y-32
+  md:gap-y-24;
+}
+.label-row {
+  @apply flex items-center justify-between;
+}
+.form-label {
+  @apply font-bold text-grey-500;
+}
+.input-wrapper {
+  @apply bg-grey-50 rounded-5 border-2 border-transparent my-transition
+  flex items-center
+  h-[3rem] px-16 mt-8;
+}
+.tip-grid {
+  @apply grid grid-cols-2 gap-16 mt-8
+  md:grid-cols-3;
+}
+.tip-option {
+  @apply font-bold text-24 text-white bg-green-900 rounded-5 my-transition
+  flex justify-center items-center
+  h-[3rem];
+}
+.tip-btn {
+  @apply flex justify-center items-center 
+  w-full h-full;
+}
+.tip-option-custom {
+  @apply bg-grey-50 flex items-center my-transition
+  px-16 rounded-5 border-2 border-transparent;
+}
+
+/* Result */
+.result-container {
+  @apply font-bold bg-green-900 rounded-15
+  mt-32 p-24
+  md:mt-40
+  lg:mt-0 lg:flex lg:flex-col lg:px-32;
+}
+.result-group {
+  @apply flex flex-col gap-y-24
+  md:gap-y-8;
+}
+.result-row {
+  @apply flex items-center justify-between;
+}
+.result-title {
+  @apply text-white;
+}
+.result-subtitle {
+  @apply text-13 text-grey-400;
+}
+.result-value {
+  @apply text-32 tracking-067 text-green-400
+  md:text-48;
+}
+.reset-btn {
+  @apply text-20 text-green-900 uppercase bg-green-400 my-transition
+  w-full h-[3rem] mt-32 rounded-5
+  lg:mt-auto;
+}
+.reset-btn:disabled {
+  @apply opacity-20;
+}
+
+/* Focus state */
+.input-wrapper:has(input[type="number"]:focus),
+.tip-option-custom:has(input[type="number"]:focus) {
+  @apply border-green-400;
+}
+.tip-option:has(input.tip-radio:checked) {
+  @apply bg-green-200 text-green-900;
+}
+.tip-option:has(input.tip-radio:focus-visible) {
+  @apply outline-2  outline-offset-2 outline-green-900;
+}
+
+/* Error */
+.error-message {
+  @apply font-bold text-orange-400;
+}
+.input-wrapper:has(input.input-error) {
+  @apply !border-orange-400;
+}
