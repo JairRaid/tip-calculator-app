@@ -1,8 +1,8 @@
 @reference "./index.css";
 
 .app-main {
-  @apply grow flex flex-col py-32
-  md:grow-0 md:w-full md:max-w-[38.5625rem]
+  @apply grow flex flex-col pt-32
+  md:grow-0 md:w-full md:max-w-[38.5625rem] md:py-32
   lg:max-w-[57.5rem];
 }
 
