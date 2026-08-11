@@ -10,4 +10,5 @@ export default defineConfig({
     environment: "jsdom", // Simulates a browser DOM environment
     setupFiles: "./src/setupTests.js", // Runs setup script before tests
   },
+  base: "/tip-calculator-app/",
 });

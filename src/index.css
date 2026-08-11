@@ -22,12 +22,12 @@
   --font-space:
     "Space Mono", system-ui, -apple-system, "Segoe UI", BlinkMacSystemFont;
 
-  --text-48: 48px;
-  --text-32: 32px;
-  --text-24: 24px;
-  --text-20: 20px;
-  --text-16: 16px;
-  --text-13: 13px;
+  --text-48: 3rem;
+  --text-32: 2rem;
+  --text-24: 1.5rem;
+  --text-20: 1.25rem;
+  --text-16: 1rem;
+  --text-13: 0.8125rem;
 
   --leading-71: 1.48;
   --leading-47: 1.47;
@@ -36,32 +36,32 @@
   --leading-24: 1.5;
   --leading-19: 1.46;
 
-  --tracking-1: 1px;
-  --tracking-067: 0.67px;
+  --tracking-1: 0.0625rem;
+  --tracking-067: 0.0419rem;
 
-  --spacing-0: 0px;
-  --spacing-8: 8px;
-  --spacing-16: 16px;
-  --spacing-24: 24px;
-  --spacing-32: 32px;
-  --spacing-48: 48px;
-  --spacing-40: 40px;
-  --spacing-80: 80px;
-  --spacing-96: 96px;
-  --spacing-120: 120px;
-  --spacing-128: 128px;
+  --spacing-0: ;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-48: 3rem;
+  --spacing-40: 2.5rem;
+  --spacing-80: 5rem;
+  --spacing-96: 6rem;
+  --spacing-120: 7.5rem;
+  --spacing-128: 8rem;
 
   /* Radius */
-  --radius-5: 5px;
-  --radius-15: 15px;
-  --radius-25: 25px;
+  --radius-5: 0.3125rem;
+  --radius-15: 0.9375rem;
+  --radius-25: 1.5625rem;
 
   /* Shadow */
-  --shadow-card: 0 32px 43px #4fa6af;
+  --shadow-card: 0 2rem 2.6875rem #4fa6af;
 
   /* Breakpoint */
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
 }
 
 body {
