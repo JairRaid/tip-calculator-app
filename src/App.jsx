@@ -41,7 +41,7 @@ const App = () => {
               </label>
               <span
                 id="bill-error"
-                className={`error-message ${errors.bill ? "" : "hidden"}`}
+                className={`error-message ${errors.bill ? "" : "invisible"}`}
                 aria-live="polite"
               >
                 {errors.bill ? "Can't be zero" : ""}
