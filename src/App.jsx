@@ -110,7 +110,7 @@ const App = () => {
               </label>
               <span
                 id="people-error"
-                className={`error-message ${errors.peopleCount ? "" : "hidden"}`}
+                className={`error-message ${errors.peopleCount ? "" : "invisible"}`}
                 aria-live="polite"
               >
                 {errors.peopleCount ? "Can't be zero" : ""}
