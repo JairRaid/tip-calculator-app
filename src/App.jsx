@@ -1,6 +1,6 @@
 import "./App.css";
 import { ACTIONS, initialState, TIP_OPTIONS } from "./data/calculatorData";
-import TipButton from "./components/tip-button/TipButton";
+import TipButton from "./components/TipButton/TipButton";
 import { useReducer } from "react";
 import { calculateTip } from "./utils/calculate";
 import { tipCalculatorReducer } from "./reducers/tipCalculatorReducer";
@@ -32,7 +32,7 @@ const App = () => {
       </header>
 
       <section className="calculator-card" aria-label="Tip Calculator">
-        <form className="calculator-form">
+        <form className="calculator-form" onSubmit={(e) => e.preventDefault()}>
           {/* Bill Section */}
           <div className="form-group">
             <div className="label-row">
@@ -146,11 +146,7 @@ const App = () => {
                 <h2 className="result-title">Tip Amount</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p
-                className="result-value"
-                aria-label="Tip amount per person"
-                aria-live="polite"
-              >
+              <p className="result-value" aria-live="polite">
                 $<span id="tip-amount-display">{tipAmountPerPerson}</span>
               </p>
             </div>
@@ -161,11 +157,7 @@ const App = () => {
                 <h2 className="result-title">Total</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p
-                className="result-value"
-                aria-label="Total amount per person"
-                aria-live="polite"
-              >
+              <p className="result-value" aria-live="polite">
                 $<span id="total-amount-display">{totalPerPerson}</span>
               </p>
             </div>
