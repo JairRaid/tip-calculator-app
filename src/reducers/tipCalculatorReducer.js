@@ -45,13 +45,45 @@ export const tipCalculatorReducer = (state, action) => {
   }
 
   if (type === ACTIONS.SET_CUSTOM_TIP) {
+    // const value = payload.value;
+    // const floatValue = parseFloat(value);
+    // if (floatValue) if (floatValue > 100) return state;
+    // return {
+    //   ...state,
+    //   customTip: value,
+    //   tipPercent: null,
+    // };
     const value = payload.value;
-    const floatValue = parseFloat(value);
-    if (floatValue) if (floatValue > 100) return state;
+    const parsed = parseFloat(value);
+
+    if (value === "")
+      return {
+        ...state,
+        customTip: "",
+        tipPercent: null,
+      };
+
+    if (!Number.isFinite(parsed) || parsed < 0) return state;
+    if (parsed === 0)
+      return {
+        ...state,
+        customTip: value,
+        tipPercent: null,
+      };
+
     return {
       ...state,
       customTip: value,
       tipPercent: null,
+    };
+  }
+
+  if (type === ACTIONS.SET_TIP_PERCENT) {
+    const value = payload.value;
+    return {
+      ...state,
+      tipPercent: value,
+      customTip: "",
     };
   }
 
