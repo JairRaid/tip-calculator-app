@@ -45,14 +45,6 @@ export const tipCalculatorReducer = (state, action) => {
   }
 
   if (type === ACTIONS.SET_CUSTOM_TIP) {
-    // const value = payload.value;
-    // const floatValue = parseFloat(value);
-    // if (floatValue) if (floatValue > 100) return state;
-    // return {
-    //   ...state,
-    //   customTip: value,
-    //   tipPercent: null,
-    // };
     const value = payload.value;
     const parsed = parseFloat(value);
 
@@ -63,7 +55,7 @@ export const tipCalculatorReducer = (state, action) => {
         tipPercent: null,
       };
 
-    if (!Number.isFinite(parsed) || parsed < 0) return state;
+    if (!Number.isFinite(parsed) || parsed < 0 || parsed > 100) return state;
     if (parsed === 0)
       return {
         ...state,
