@@ -17,8 +17,7 @@ const App = () => {
   };
 
   const handleClick = (e, actionType) => {
-    if (actionType === ACTIONS.SET_TIP_PERCENT)
-      dispatch({ type: actionType, payload: { value: e.target.value } });
+    dispatch({ type: actionType, payload: { value: e.target.value } });
 
     if (actionType === ACTIONS.RESET) dispatch({ type: ACTIONS.RESET });
   };
