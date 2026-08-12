@@ -15,6 +15,8 @@ const setup = () => {
   const getTotalAmount = () => document.querySelector("#total-amount-display");
   const getRadioOptions = () => document.querySelectorAll(".tip-radio");
   const getResetButton = () => document.querySelector(".reset-btn");
+  const getBillError = () => document.querySelector("#bill-error");
+  const getPeopleError = () => document.querySelector("#people-error");
 
   return {
     user,
@@ -26,6 +28,8 @@ const setup = () => {
     getTotalAmount,
     getRadioOptions,
     getResetButton,
+    getBillError,
+    getPeopleError,
   };
 };
 
@@ -135,5 +139,19 @@ describe("Tipcalculator component", () => {
     expect(tipAmount).toHaveTextContent("0.00");
     expect(total).toHaveTextContent("0.00");
     expect(reset).toBeDisabled();
+  });
+
+  it("show error message when bill or people value is zero", async () => {
+    const { user, getBillInput, getPeopleInput, getBillError, getPeopleError } =
+      setup();
+
+    const billInput = getBillInput();
+    const peopleInput = getPeopleInput();
+
+    await user.type(billInput, "0");
+    await user.type(peopleInput, "0");
+
+    expect(getBillError()).toBeInTheDocument();
+    expect(getPeopleError()).toBeInTheDocument();
   });
 });
