@@ -70,15 +70,6 @@ export const tipCalculatorReducer = (state, action) => {
     };
   }
 
-  if (type === ACTIONS.SET_TIP_PERCENT) {
-    const value = payload.value;
-    return {
-      ...state,
-      tipPercent: value,
-      customTip: "",
-    };
-  }
-
   if (type === ACTIONS.SET_PEOPLE_COUNT) {
     const value = payload.value;
     const parsed = parseInt(value);
