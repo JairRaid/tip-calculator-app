@@ -44,7 +44,7 @@ const App = () => {
                 className={`error-message ${errors.bill ? "" : "hidden"}`}
                 aria-live="polite"
               >
-                Can't be zero
+                {errors.bill ? "Can't be zero" : ""}
               </span>
             </div>
             <div className="input-wrapper">
@@ -113,7 +113,7 @@ const App = () => {
                 className={`error-message ${errors.peopleCount ? "" : "hidden"}`}
                 aria-live="polite"
               >
-                Can't be zero
+                {errors.peopleCount ? "Can't be zero" : ""}
               </span>
             </div>
             <div className="input-wrapper">
