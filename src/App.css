@@ -74,7 +74,7 @@
   md:text-48;
 }
 .reset-btn {
-  @apply text-20 text-green-900 uppercase bg-green-400 my-transition
+  @apply text-20 text-green-900 uppercase bg-green-400
   w-full h-[3rem] mt-32 rounded-5
   lg:mt-auto;
 }
