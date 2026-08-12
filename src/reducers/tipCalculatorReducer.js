@@ -74,8 +74,6 @@ export const tipCalculatorReducer = (state, action) => {
     const value = payload.value;
     const parsed = parseInt(value);
 
-    if (Number.isFinite(parseFloat(value))) return state;
-
     if (value === "")
       return {
         ...state,
