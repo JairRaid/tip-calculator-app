@@ -1,9 +1,10 @@
 export const calculateTip = (data) => {
   const bill = parseFloat(data.bill) || 0;
-  const people = parseInt(data.peopleCount) || 0;
-  const tipPercent = data.tipPercent || data.customTip || 0;
+  const people = Number(data.peopleCount);
+  const tipPercent = parseFloat(data.tipPercent || data.customTip) || 0;
 
-  if (bill <= 0 || people <= 0) {
+  // Reject non-integer, zero, negative, or invalid numbers of people
+  if (bill <= 0 || !Number.isInteger(people) || people <= 0) {
     return {
       tipAmountPerPerson: "0.00",
       totalPerPerson: "0.00",
