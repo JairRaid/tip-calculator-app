@@ -139,14 +139,14 @@ const App = () => {
 
         {/* Calculation Results Container */}
         <div className="result-container">
-          <div className="result-group">
+          <div className="result-group" aria-live="polite" aria-atomic="true">
             {/* Tip Amount Result */}
             <div className="result-row">
               <div className="result-label-group">
                 <h2 className="result-title">Tip Amount</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p className="result-value" aria-live="polite">
+              <p className="result-value">
                 $<span id="tip-amount-display">{tipAmountPerPerson}</span>
               </p>
             </div>
@@ -157,7 +157,7 @@ const App = () => {
                 <h2 className="result-title">Total</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p className="result-value" aria-live="polite">
+              <p className="result-value">
                 $<span id="total-amount-display">{totalPerPerson}</span>
               </p>
             </div>
