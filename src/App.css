@@ -36,7 +36,7 @@
   md:grid-cols-3;
 }
 .tip-option {
-  @apply font-bold text-24 text-white bg-green-900 rounded-5 my-transition
+  @apply font-bold text-24 text-white bg-green-900 rounded-5 my-transition hover:bg-green-200
   flex justify-center items-center
   h-[3rem];
 }
@@ -74,7 +74,7 @@
   md:text-48;
 }
 .reset-btn {
-  @apply text-20 text-green-900 uppercase bg-green-400
+  @apply text-20 text-green-900 uppercase bg-green-400 my-transition hover:bg-green-200
   w-full h-[3rem] mt-32 rounded-5
   lg:mt-auto;
 }
