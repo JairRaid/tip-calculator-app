@@ -128,6 +128,7 @@ const App = () => {
                 step="1"
                 inputMode="numeric"
                 placeholder="0"
+                aria-invalid={errors.peopleCount}
                 aria-describedby="people-error"
                 value={peopleCount}
                 onChange={(e) => handleChange(e, ACTIONS.SET_PEOPLE_COUNT)}
@@ -145,7 +146,11 @@ const App = () => {
                 <h2 className="result-title">Tip Amount</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p className="result-value" aria-label="Tip amount per person">
+              <p
+                className="result-value"
+                aria-label="Tip amount per person"
+                aria-live="polite"
+              >
                 $<span id="tip-amount-display">{tipAmountPerPerson}</span>
               </p>
             </div>
@@ -156,7 +161,11 @@ const App = () => {
                 <h2 className="result-title">Total</h2>
                 <p className="result-subtitle">/ person</p>
               </div>
-              <p className="result-value" aria-label="Total amount per person">
+              <p
+                className="result-value"
+                aria-label="Total amount per person"
+                aria-live="polite"
+              >
                 $<span id="total-amount-display">{totalPerPerson}</span>
               </p>
             </div>

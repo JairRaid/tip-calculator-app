@@ -5,12 +5,32 @@ export const tipCalculatorReducer = (state, action) => {
 
   if (type === ACTIONS.SET_BILL) {
     const value = payload.value;
+    const parsed = parseFloat(value);
+
+    if (value === "")
+      return {
+        ...state,
+        bill: "",
+        errors: { ...state.errors, bill: false },
+      };
+
+    if (!Number.isFinite(parsed) || parsed < 0) return state;
+    if (parsed === 0)
+      return {
+        ...state,
+        bill: value,
+        errors: {
+          ...state.errors,
+          bill: true,
+        },
+      };
+
     return {
       ...state,
       bill: value,
       errors: {
         ...state.errors,
-        bill: value === "0" ? true : false,
+        bill: false,
       },
     };
   }
@@ -37,10 +57,33 @@ export const tipCalculatorReducer = (state, action) => {
 
   if (type === ACTIONS.SET_PEOPLE_COUNT) {
     const value = payload.value;
+    const parsed = parseFloat(value);
+
+    if (value === "")
+      return {
+        ...state,
+        peopleCount: "",
+        errors: { ...state.errors, peopleCount: false },
+      };
+
+    if (!Number.isFinite(parsed) || parsed < 0) return state;
+    if (parsed === 0)
+      return {
+        ...state,
+        peopleCount: value,
+        errors: {
+          ...state.errors,
+          peopleCount: true,
+        },
+      };
+
     return {
       ...state,
       peopleCount: value,
-      errors: { ...state.errors, peopleCount: value === "0" ? true : false },
+      errors: {
+        ...state.errors,
+        peopleCount: false,
+      },
     };
   }
 
