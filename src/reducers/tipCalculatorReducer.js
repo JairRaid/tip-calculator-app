@@ -57,7 +57,7 @@ export const tipCalculatorReducer = (state, action) => {
 
   if (type === ACTIONS.SET_PEOPLE_COUNT) {
     const value = payload.value;
-    const parsed = parseFloat(value);
+    const parsed = parseInt(value);
 
     if (value === "")
       return {
@@ -66,7 +66,7 @@ export const tipCalculatorReducer = (state, action) => {
         errors: { ...state.errors, peopleCount: false },
       };
 
-    if (!Number.isFinite(parsed) || parsed < 0) return state;
+    if (!Number.isInteger(parsed) || parsed < 0) return state;
     if (parsed === 0)
       return {
         ...state,
